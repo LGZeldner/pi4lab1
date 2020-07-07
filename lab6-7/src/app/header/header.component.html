@@ -1,0 +1,46 @@
+<header>
+    <div class="container-fluid">
+        <div class="row header ">
+          <div class="col-sm logo text-center "><a [routerLink]="['']">Логотип</a></div><!--<img src="/assets/img/logo.png" alt="Логотип" ></a>-->
+            <nav class="row">
+            <div class="col  text-center"><a href="#about" >О нас</a></div>
+            <div class="col  text-center"><a href="#films">Фильмы и сериалы</a></div>
+            <div class="col  text-center"><a href="#contacts">Контакты</a></div>
+            </nav>
+            <div class="col  contact text-center ">
+                <button type="button" class="btn mt-3" data-toggle="modal" data-target="#myModal">
+                Сделать заказ
+            </button>
+                <div class="tel">
+                <p >Тел: 8(910)-422-22-21 <br> 8(967)-422-22-21</p>
+            </div>
+            </div>
+
+        </div>
+    </div>
+    </header>
+
+
+
+<!-- Модальное окно -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+            <h4 class="modal-title mt-3" >Сделать заказ</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body m-3 mt-5">
+          <div class="row text-center">
+              <div class="col">
+                  <button class="btn"><a href=".//#films">Посмотреть каталог фильмов</a></button>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- Модальное окно -->
+

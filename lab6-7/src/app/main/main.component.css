@@ -1,0 +1,106 @@
+main {
+    background-image: url(src/assets/img/curtains.png);
+    background-size: cover;
+    background-color: #fcfcf0;
+    display: block;
+  margin-top: -6em;
+}
+main a {
+    color: black;
+}
+main .block {
+    padding: 0 5%;
+}
+main h2 a {
+  font-family: 'Helvetica Neue', serif;
+}
+main .about{
+    display: grid;
+    grid-template-rows: 80px auto auto;
+    margin-top: 80px;
+}
+main .about p {
+    font-size: 20px;
+}
+main .about img {
+    width: 100%;
+    margin: 0 15%;
+
+}
+main .about .lower {
+    margin-top: 100px;
+}
+main .about .person {
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+}
+
+
+
+main .filmsphoto{
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    justify-content: space-between;
+}
+
+
+    main .filmsphoto .photo div{
+        background: #000;
+        overflow: hidden;
+    }
+    main .filmsphoto .photo div img{
+        opacity: 1;
+        transition: opacity 124ms linear, transform 124ms linear;
+    }
+    main .filmsphoto .photo:hover div img{
+        opacity: 0.7;
+    }
+    main .filmsphoto .order {
+        margin-top: 15px;
+        font-size: 20px;
+
+    }
+
+    main .afterPhoto{
+        display: grid;
+        grid-template-rows: 30px 50px;
+        align-items: center;
+        font-size: 20px;
+    }
+    main .afterPhoto .takeLink {
+    border: 3px solid #770a00;
+    padding: 5px 20px;
+    width: 30%;
+    }
+
+
+
+    main .contact {
+        display: grid;
+        grid-template-rows: 100px 30px 30px 30px 30px 70px;
+        align-items: center;
+    }
+    main .contact p {
+        font-size: 20px;
+    }
+
+
+    @media screen and (max-device-width: 1024px) {
+        main
+        main .block {padding: 0 10%;}
+        main .afterPhoto .takeLink {width: 50%;}
+
+       }
+       @media screen and (max-device-width: 630px) {
+        main .block {padding: 0 15%;}
+        main .about .person {display: block; }
+        main .about .lower {margin-top: 0;}
+        main .about img {margin: 20px 0%;}
+        main .films {margin-top: 30px;}
+        main .filmsphoto{display: block;}
+        main .afterPhoto .takeLink {width: 100%; margin-top: 60px;}
+        main .contact {grid-template-rows: auto;}
+       }
+@media (min-width: 992px) {
+  main .container {max-width: 895px;}
+}

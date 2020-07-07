@@ -1,0 +1,55 @@
+<app-header></app-header>
+<div class="forma">
+  <!--<img src="/assets/img/head.png" alt="заголовок" class="w-100">-->
+<div class="container p-5 ">
+    <div class="col">
+        <button class="btn " type="submit" [routerLink]="['']">Вернуться на главную</button>
+</div>
+    <h3 class=" text-center" >Заказ фильма "{{film.name}}"</h3>
+    <form  class="p-5" [formGroup]="formReady" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label for="name_customer">Имя:<sup>*</sup></label>
+
+            <input type="text" class="form-control mb-3" name="name_customer"  formControlName="name_customer">
+            <label for="address">Адрес:<sup>*</sup></label>
+            <input type="text" class="form-control mb-3" name="address"  formControlName="address">
+            <label for="tel" >Телефон:<sup>*</sup></label>
+            <input type="text" class="form-control mb-3" name="tel" formControlName="tel" mask="0(000)-000-00-00" [showMaskTyped]="true"">
+            <label for="email">Email:<sup>*</sup></label>
+            <input type="text" name="email" class="form-control mb-3"  formControlName="email">
+            <div *ngIf="formReady.get('email').invalid && formReady.get('email').touched" class="alert alert-danger">
+          Некорректный email
+        </div>
+
+
+            <label for="date">Когда вам нужен фильм?<sup>*</sup></label>
+            <input type="date" name="date"class="form-control mb-3"  formControlName="date" >
+            <p><sup>*</sup> - Необходимые поля для заполнения</p>
+            <input type="checkbox" class="mb-lg-5" id="" checked disabled>Даю согласие на обработку персональных данных
+            <div class="row order mt-3">
+                <div class="col">
+                <p>Цена фильма: {{film.price}}</p>
+            </div>
+        <div  class="col text-right">
+            <button class="btn w-lg-50" type="submit" [disabled]="formReady.invalid">Заказать</button>
+    </div>
+
+        </div>
+        </div>
+
+    </form>
+
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+

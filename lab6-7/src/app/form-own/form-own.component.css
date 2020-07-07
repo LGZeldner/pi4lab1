@@ -1,0 +1,24 @@
+.forma {
+    background-image: url(/assets/img/bgcurtain.jpg);
+    background-size:contain;
+}
+.forma sup {
+    color: red;
+}
+.forma form button {
+    border: 3px solid #770a00;
+    padding: 5px 20px;
+    color: solid #770a00;
+    font-size: 20px;
+}
+.forma .order {
+    font-size: 20px;
+}
+.forma button:hover{
+    text-decoration: underline;
+}
+@media screen and (max-device-width: 1024px) {
+    .forma .container {
+        padding: 8%!important;
+    }
+}

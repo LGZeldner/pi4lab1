@@ -1,0 +1,43 @@
+{
+  "films": [
+    {
+      "id":1,
+      "name":"Тор",
+      "picture":"/assets/img/film1.jpg",
+      "info":"Информация о фильме",
+      "price":"400 руб."
+    },
+    {
+      "id":2,
+      "name":"Weeds",
+      "picture":"/assets/img/film2.jpg",
+      "info":"Информация о фильме",
+      "price":"350 руб."
+    },
+    {
+      "id":3,
+      "name":"Бунт ушастых",
+      "picture":"/assets/img/film3.png",
+      "info":"Информация о фильме",
+      "price":"389 руб."
+    },
+    {
+      "id":4,
+      "name":"Бунт ушастых",
+      "picture":"/assets/img/film3.png",
+      "info":"Информация о фильме",
+      "price":"389 руб."
+    },
+    {
+      "id":5,
+      "name":"Тор",
+      "picture":"/assets/img/film1.jpg",
+      "info":"Информация о фильме",
+      "price":"400 руб."
+    }
+  ],
+
+  "profile": {
+    "name": "typecode"
+  }
+}

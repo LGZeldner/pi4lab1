@@ -1,0 +1,34 @@
+.forma {
+  background-image: url(src/assets/img/curtains.png);
+  background-size: cover;
+  background-color: #fcfcf0;
+  display: block;
+
+}
+.forma h3 {
+  font-family: "Helvetica Neue", serif;
+}
+.forma sup {
+    color: red;
+}
+.forma form button {
+    border: 3px solid #770a00;
+    padding: 5px 20px;
+    color: #770a00; /*solid;*/
+    font-size: 20px;
+}
+.forma .order {
+    font-size: 25px;
+}
+.forma button:hover{
+    text-decoration: underline;
+}
+@media screen and (max-device-width: 1024px) {
+    .forma .container {padding: 8%!important;}
+}
+@media screen and (max-device-width: 630px){
+    .forma .order {font-size: 15px;}
+}
+@media (min-width: 992px) {
+  .forma .container {max-width: 895px;}
+}

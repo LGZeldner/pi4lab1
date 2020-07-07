@@ -1,0 +1,67 @@
+<app-header></app-header>
+
+
+<div class="forma">
+    <img src="/assets/img/cream.png" alt="Крем" class="w-100">
+<div class="container p-5 ">
+    <div class="col">
+        <button class="btn " type="submit" [routerLink]="['']">Вернуться на главную</button>
+</div>
+    <h3 class=" text-center" >Заказ фильма с индивидуальными параметрами</h3>
+    <form  class="p-5" [formGroup]="formOwn" (ngSubmit)="onSubmit()">
+        <div class="form-group ">
+            <label for="name">Имя:<sup>*</sup></label>
+
+            <input type="text" class="form-control mb-3" name="name"  formControlName="name_customer" >
+            <label for="address">Адрес:<sup>*</sup></label>
+            <input type="text" class="form-control mb-3" name="address" formControlName="address">
+            <label for="tel">Телефон:<sup>*</sup></label>
+            <input type="text" class="form-control mb-3" name="tel"  formControlName="tel" [textMask]="{mask: mask}">
+            <label for="email">Email:<sup>*</sup></label>
+            <input type="text" name="email" class="form-control mb-3"  formControlName="email">
+            <div *ngIf="formOwn.get('email').invalid && formOwn.get('email').touched" class="alert alert-danger">
+            Некорректный email
+          </div>
+            <label for="corz">Тип коржа:</label>
+            <select name="corz" id="" class="form-control mb-3" formControlName="corz" >
+                <option >Бисквитный</option>
+                <option >Слоеный</option>
+                <option >Медовый</option>
+                <option >Песочный</option>
+            </select>
+            <label for="filling">Начинка:</label>
+            <select name="filling" id=""  class="form-control mb-3" formControlName="filling">
+                <option >Трюфель</option>
+                <option >Крем Чизкейк</option>
+                <option >Белковый</option>
+                <option >Джем, повидло</option>
+                <option >Сгущенка</option>
+                <option >Карамель с бананом или клубникой</option>
+                <option >Шоколад с клубникой или бананом.</option>
+                <option >Безе</option>
+                <option >Мусс</option>
+            </select>
+            <label for="weight">Веc фильма(г):</label>
+            <input type="number" name="weight" id=""  class="form-control mb-3" formControlName="weight">
+            <label for="tiers">Количество ярусов:</label>
+            <input type="number" name="tiers" id=""  class="form-control mb-3" formControlName="tiers">
+            <label for="wishes">Опишите свои пожелания:</label>
+            <textarea name="wishes" id="" cols="30" rows="10"  class="form-control mb-3" formControlName="wishes"></textarea>
+
+
+
+
+            <label for="date">Когда вам нужен фильм?<sup>*</sup></label>
+            <input type="date" name="date"class="form-control mb-3" formControlName="date"   >
+            <p><sup>*</sup> - Необходимые поля для заполнения</p>
+            <input type="checkbox" class="mb-3" id="" checked disabled>Даю согласие на обработку персональных данных
+            <p class="order text-center m-3 "> Цена фильма сообщается после обсуждения и подтверждения всех параметров фильма!</p>
+        <div  class="col text-right mt-5">
+            <button class="btn w-lg-25" type="submit" [disabled]="formOwn.invalid">Заказать</button>
+    </div>
+        </div>
+
+    </form>
+
+</div>
+</div>
